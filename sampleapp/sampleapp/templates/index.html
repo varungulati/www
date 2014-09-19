@@ -1,0 +1,25 @@
+guiui
+{% load dajaxice_templatetags %}
+{% dajaxice_js_import %}
+<script type="text/javascript" src="/static/dajax/jquery.dajax.core.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+function populate() {
+
+}
+</script>
+
+
+<form action="/execute_c/" method="get">
+<input type="submit" value="Execute C!"/>
+</form>
+
+here {{ time }}
+<input type="text" value="" id="result">
+<input type="button" value="test_ajax" onclick="Dajaxice.sampleapp.execeuteCAjax(Dajax.process);">
+
+<form action="/broken_urls/" method="get">
+	URL: <input type="text" name="url">
+	<input type="submit" value="Get broken links"/>
+</form>
