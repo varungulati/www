@@ -51,6 +51,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.load_template_source',
+)
+
 ROOT_URLCONF = 'dronegama.urls'
 
 WSGI_APPLICATION = 'dronegama.wsgi.application'
@@ -84,3 +90,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/',
+)
